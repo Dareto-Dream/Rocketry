@@ -1,5 +1,6 @@
 package com.dareto.advancingrocketry;
 
+import com.dareto.advancingrocketry.block.ModBlocks;
 import com.dareto.advancingrocketry.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTab;
@@ -35,6 +36,7 @@ public class AdvancingRocketry
         MinecraftForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
