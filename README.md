@@ -9,6 +9,9 @@ Init
  - update gitignore
 Basic Items
  - added steel
+Blocks
+ - added steel Blocks
+ - added stell block item
 
 
 If you want to help message my discord Tag:Darthdream
