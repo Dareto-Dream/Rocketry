@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "blocks/fuel_tank_particle",
+    "up": "blocks/fuel_tank_top",
+    "down": "blocks/fuel_tank_side",
+    "north": "blocks/fuel_tank_empty_front",
+    "south": "blocks/fuel_tank_side",
+    "east": "blocks/fuel_tank_side",
+    "west": "blocks/fuel_tank_side"
+  }
+}

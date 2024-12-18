@@ -52,10 +52,12 @@ public class AdvancingRocketry
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.STEEL);
+            event.accept(ModItems.ROCKET_FUEL);
         }
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.STEEL_BLOCK);
+            event.accept(ModBlocks.FUEL_TANK);
         }
     }
 

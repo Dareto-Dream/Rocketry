@@ -1,5 +1,7 @@
 {
   "item.advancingrocketry.steel": "Steel Ingot",
+  "item.advancingrocketry.rocket_fuel": "Rocket Fuel",
 
-  "block.advancingrocketry.steel_block": "Steel Block"
+  "block.advancingrocketry.steel_block": "Steel Block",
+  "block.advancingrocketry.fuel_tank": "Fuel Tank"
 }

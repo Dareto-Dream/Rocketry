@@ -22,6 +22,10 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK)));
 
+    public static final RegistryObject<Block> FUEL_TANK = registerBlock("fuel_tank",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(1f).sound(SoundType.NETHER_BRICKS)));
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
