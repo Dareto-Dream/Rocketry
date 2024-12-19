@@ -24,7 +24,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> FUEL_TANK = registerBlock("fuel_tank",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(1f).sound(SoundType.NETHER_BRICKS)));
+                    .strength(3f).requiresCorrectToolForDrops().sound(SoundType.NETHER_BRICKS)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

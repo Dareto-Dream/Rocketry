@@ -16,6 +16,10 @@ Updates:
     Tabs
      - added creative mode tabs
      - added multiple states for fuel tank
+    Crafting and Loot Tables
+     - added crafting for steel family
+     - added drops to all blocks
+     - minimum tool requirement added
 
 
 If you want to help message my discord Tag: Darthdream
