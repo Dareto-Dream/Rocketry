@@ -1,10 +1,10 @@
 {
   "variants": {
-    "full": {
-      "model": "advancingrocketry:block/fuel_tank"
-    },
     "": {
       "model": "advancingrocketry:block/fuel_tank_empty"
+    },
+    "full": {
+      "model": "advancingrocketry:block/fuel_tank"
     }
   }
 }

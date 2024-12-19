@@ -3,5 +3,8 @@
   "item.advancingrocketry.rocket_fuel": "Rocket Fuel",
 
   "block.advancingrocketry.steel_block": "Steel Block",
-  "block.advancingrocketry.fuel_tank": "Fuel Tank"
+  "block.advancingrocketry.fuel_tank": "Fuel Tank",
+
+  "creativetab.advancingrocketry.rocket_supplies": "Rocket Supplies",
+  "creativetab.advancingrocketry.rocket_tools": "Rocket Tools"
 }
