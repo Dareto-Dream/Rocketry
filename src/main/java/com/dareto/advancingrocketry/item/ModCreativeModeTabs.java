@@ -22,6 +22,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ROCKET_FUEL.get());
                         output.accept(ModBlocks.FUEL_TANK.get());
 
+                        output.accept(ModItems.CHISEL.get());
+
 
                     }).build());
 

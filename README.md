@@ -20,6 +20,9 @@ Updates:
      - added crafting for steel family
      - added drops to all blocks
      - minimum tool requirement added
+    Chisel stuf
+     - Added chisel and uses
+     - Added chisel recipes
 
 
 If you want to help message my discord Tag: Darthdream

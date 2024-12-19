@@ -1,6 +1,8 @@
 package com.dareto.advancingrocketry.item;
 
 import com.dareto.advancingrocketry.AdvancingRocketry;
+import com.dareto.advancingrocketry.item.custom.ChiselItem;
+import com.dareto.advancingrocketry.item.custom.RocketFuelItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -15,7 +17,10 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> ROCKET_FUEL = ITEMS.register("rocket_fuel",
-            () -> new Item(new Item.Properties()));
+            () -> new RocketFuelItem(new Item.Properties().durability(1)));
+
+    public static final RegistryObject<Item> CHISEL = ITEMS.register("chisel",
+            () -> new ChiselItem(new Item.Properties().durability(32)));
 
 
 
