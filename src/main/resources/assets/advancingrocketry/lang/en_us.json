@@ -4,9 +4,12 @@
 
   "item.advancingrocketry.chisel": "Chisel",
 
+  "item.advancingrocketry.crude_oil_bucket": "Bucket of Crude Oil",
+
   "block.advancingrocketry.steel_block": "Steel Block",
   "block.advancingrocketry.fuel_tank": "Fuel Tank",
 
   "creativetab.advancingrocketry.rocket_supplies": "Rocket Supplies",
-  "creativetab.advancingrocketry.rocket_tools": "Rocket Tools"
+  "creativetab.advancingrocketry.rocket_tools": "Rocket Tools",
+  "creativetab.advancingrocketry.rocket_liquid": "Rocket Liquid"
 }

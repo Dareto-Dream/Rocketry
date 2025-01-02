@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "level=0": {
+      "model": "advancingrocketry:block/crude_oil_still"
+    },
+    "level=1": {
+      "model": "advancingrocketry:block/crude_oil_flow"
+    },
+    "level=2": {
+      "model": "advancingrocketry:block/crude_oil_flow"
+    },
+    "level=3": {
+      "model": "advancingrocketry:block/crude_oil_flow"
+    },
+    "level=4": {
+      "model": "advancingrocketry:block/crude_oil_flow"
+    },
+    "level=5": {
+      "model": "advancingrocketry:block/crude_oil_flow"
+    },
+    "level=6": {
+      "model": "advancingrocketry:block/crude_oil_flow"
+    },
+    "level=7": {
+      "model": "advancingrocketry:block/crude_oil_flow"
+    },
+    "level=8": {
+      "model": "advancingrocketry:block/crude_oil_flow"
+    },
+    "level=9": {
+      "model": "advancingrocketry:block/crude_oil_flow"
+    },
+    "level=10": {
+      "model": "advancingrocketry:block/crude_oil_flow"
+    },
+    "level=11": {
+      "model": "advancingrocketry:block/crude_oil_flow"
+    },
+    "level=12": {
+      "model": "advancingrocketry:block/crude_oil_flow"
+    },
+    "level=13": {
+      "model": "advancingrocketry:block/crude_oil_flow"
+    },
+    "level=14": {
+      "model": "advancingrocketry:block/crude_oil_flow"
+    },
+    "level=15": {
+      "model": "advancingrocketry:block/crude_oil_flow"
+    }
+  }
+}

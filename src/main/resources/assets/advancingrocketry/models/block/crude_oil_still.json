@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/lava",
+  "textures": {
+    "particle": "advancingrocketry:block/crude_oil_still",
+    "all": "advancingrocketry:block/crude_oil_still"
+  }
+}
