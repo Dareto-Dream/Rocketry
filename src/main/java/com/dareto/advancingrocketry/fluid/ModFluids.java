@@ -27,19 +27,20 @@ public class ModFluids {
     public static final DeferredRegister<net.minecraftforge.fluids.FluidType> FLUID_TYPES = DeferredRegister.create(ForgeRegistries.Keys.FLUID_TYPES, AdvancingRocketry.MOD_ID);
 
     public static final RegistryObject<net.minecraftforge.fluids.FluidType> CRUDE_OIL_TYPE = FLUID_TYPES.register("crude_oil_block",
-            () -> new CrudeOilFluidType());
+            CrudeOilFluidType::new);
 
     public static final RegistryObject<ForgeFlowingFluid.Source> CRUDE_OIL = FLUIDS.register("crude_oil_still",
             () -> new ForgeFlowingFluid.Source(ModFluids.CRUDE_OIL_PROPERTIES));
+
     public static final RegistryObject<ForgeFlowingFluid.Flowing> FLOWING_CRUDE_OIL = FLUIDS.register("crude_oil_flow",
             () -> new ForgeFlowingFluid.Flowing(ModFluids.CRUDE_OIL_PROPERTIES));
 
     public static final ForgeFlowingFluid.Properties CRUDE_OIL_PROPERTIES = new ForgeFlowingFluid.Properties(
-            () -> CRUDE_OIL_TYPE.get(),
-            () -> CRUDE_OIL.get(),
-            () -> FLOWING_CRUDE_OIL.get())
-            .bucket(() -> ModItems.CRUDE_OIL_BUCKET.get())
-            .block(() -> (LiquidBlock) ModBlocks.CRUDE_OIL_BLOCK.get())
+            CRUDE_OIL_TYPE,
+            CRUDE_OIL,
+            FLOWING_CRUDE_OIL)
+            .bucket(ModItems.CRUDE_OIL_BUCKET)
+            .block(ModBlocks.CRUDE_OIL_BLOCK)
             .explosionResistance(100.0f)
             .tickRate(30);
 

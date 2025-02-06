@@ -37,9 +37,10 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.NETHER_BRICKS)));
 
+
     // Crude Oil Block
-    public static final RegistryObject<LiquidBlock> CRUDE_OIL_BLOCK = BLOCKS.register("crude_oil_block",
-            () -> new LiquidBlock(() -> ModFluids.CRUDE_OIL.get(),
+    public static final RegistryObject<LiquidBlock> CRUDE_OIL_BLOCK = BLOCKS.register("crude_oil",
+            () -> new LiquidBlock(ModFluids.CRUDE_OIL,
                     BlockBehaviour.Properties.of()
                             .mapColor(MapColor.WATER)
                             .noCollission()
