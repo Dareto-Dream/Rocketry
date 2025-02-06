@@ -38,7 +38,7 @@ public class ModCreativeModeTabs {
 
                     }).build());
 
-    public static final RegistryObject<CreativeModeTab> ROCKET_LIQUID_TAB = CREATIVE_MODE_TABS.register("rocket_liquid_tab",
+/*    public static final RegistryObject<CreativeModeTab> ROCKET_LIQUID_TAB = CREATIVE_MODE_TABS.register("rocket_liquid_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.CRUDE_OIL_BUCKET.get()))
                     .withTabsBefore(ROCKET_SUPPLIES_TAB.getId())
                     .title(Component.translatable("creativetab.advancingrocketry.rocket_liquid"))
@@ -46,7 +46,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.CRUDE_OIL_BUCKET.get());
 
 
-                    }).build());
+                    }).build());*/
 
 
 
