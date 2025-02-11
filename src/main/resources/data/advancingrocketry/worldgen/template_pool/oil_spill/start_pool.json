@@ -1,0 +1,21 @@
+{
+  "name": "advancingrocketry:oil_spill/start_pool",
+
+  "fallback": "minecraft:empty",
+
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+
+        "location": "advancingrocketry:oil_spill",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
