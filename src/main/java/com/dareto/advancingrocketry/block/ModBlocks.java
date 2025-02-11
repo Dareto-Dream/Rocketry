@@ -1,10 +1,13 @@
 package com.dareto.advancingrocketry.block;
 
 import com.dareto.advancingrocketry.AdvancingRocketry;
+import com.dareto.advancingrocketry.fluid.ModFluids;
 import com.dareto.advancingrocketry.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -32,6 +35,10 @@ public class ModBlocks {
                     .strength(3f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.NETHER_BRICKS)));
+
+    // Crude Oil
+    public static final RegistryObject<LiquidBlock> CRUDE_OIL_BLOCK = BLOCKS.register("crude_oil_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_CRUDE_OIL, BlockBehaviour.Properties.ofFullCopy(Blocks.WATER)));
 
 
 

@@ -1,6 +1,7 @@
 {
   "item.advancingrocketry.steel": "Steel Ingot",
   "item.advancingrocketry.rocket_fuel": "Rocket Fuel",
+  "team.advancingrocketry.crude_oil_bucket": "Crude Oil Bucket",
 
   "item.advancingrocketry.chisel": "Chisel",
 
@@ -11,5 +12,10 @@
 
   "creativetab.advancingrocketry.rocket_supplies": "Rocket Supplies",
   "creativetab.advancingrocketry.rocket_tools": "Rocket Tools",
-  "creativetab.advancingrocketry.rocket_liquid": "Rocket Liquid"
+  "creativetab.advancingrocketry.rocket_liquid": "Rocket Liquid",
+
+  "painting.advancingrocketry.saw_them.title": "Saw Them",
+  "painting.advancingrocketry.saw_them.author": "DareToDream",
+  "painting.advancingrocketry.the_abyss.title": "The Abyss",
+  "painting.advancingrocketry.the_abyss.author": "The Gunman"
 }

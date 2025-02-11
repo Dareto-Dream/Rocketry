@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:item/bucket",
+  "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "advancingrocketry:item/crude_oil_bucket"
   }
