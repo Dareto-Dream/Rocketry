@@ -1,18 +1,38 @@
 {
   "variants": {
-    "facing=east": {
-      "model": "advancingrocketry:block/fuel_tank",
-      "y": 90
+    "full": {
+      "facing=east": {
+        "model": "advancingrocketry:block/fuel_tank",
+      },
+      "facing=north": {
+        "model": "advancingrocketry:block/fuel_tank",
+        "y": 180
+      },
+      "facing=south": {
+        "model": "advancingrocketry:block/fuel_tank",
+        "y": 90
+      },
+      "facing=west": {
+        "model": "advancingrocketry:block/fuel_tank",
+        "y": 270
+      }
     },
-    "facing=north": {
-      "model": "advancingrocketry:block/fuel_tank"
-    },
-    "facing=south": {
-      "model": "advancingrocketry:block/fuel_tank"
-    },
-    "facing=west": {
-      "model": "advancingrocketry:block/fuel_tank",
-      "y": 90
+    "": {
+      "facing=east": {
+        "model": "advancingrocketry:block/fuel_tank_empty"
+      },
+      "facing=north": {
+        "model": "advancingrocketry:block/fuel_tank_empty",
+        "y": 180
+      },
+      "facing=south": {
+        "model": "advancingrocketry:block/fuel_tank_empty",
+        "y": 90
+      },
+      "facing=west": {
+        "model": "advancingrocketry:block/fuel_tank_empty",
+        "y": 270
+      }
     }
   }
 }
