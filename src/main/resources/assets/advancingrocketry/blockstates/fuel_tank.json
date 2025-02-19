@@ -1,10 +1,18 @@
 {
   "variants": {
-    "": {
-      "model": "advancingrocketry:block/fuel_tank_empty"
+    "facing=east": {
+      "model": "advancingrocketry:block/fuel_tank",
+      "y": 90
     },
-    "full": {
+    "facing=north": {
       "model": "advancingrocketry:block/fuel_tank"
+    },
+    "facing=south": {
+      "model": "advancingrocketry:block/fuel_tank"
+    },
+    "facing=west": {
+      "model": "advancingrocketry:block/fuel_tank",
+      "y": 90
     }
   }
 }
