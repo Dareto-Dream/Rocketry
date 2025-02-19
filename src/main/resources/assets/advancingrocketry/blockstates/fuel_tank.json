@@ -2,7 +2,7 @@
   "variants": {
     "full": {
       "facing=east": {
-        "model": "advancingrocketry:block/fuel_tank",
+        "model": "advancingrocketry:block/fuel_tank"
       },
       "facing=north": {
         "model": "advancingrocketry:block/fuel_tank",
