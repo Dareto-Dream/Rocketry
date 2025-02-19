@@ -20,7 +20,7 @@ public class ModFluidTypes {
             DeferredRegister.create(ForgeRegistries.Keys.FLUID_TYPES, AdvancingRocketry.MOD_ID);
 
     public static final RegistryObject<FluidType> CRUDE_OIL_FLUID_TYPE = register("crude_oil_fluid",
-            FluidType.Properties.create().lightLevel(2).density(15).viscosity(5).sound(SoundAction.get("drink"),
+            FluidType.Properties.create().lightLevel(2).density(15).viscosity(3).sound(SoundAction.get("drink"),
                     SoundEvents.HONEY_DRINK));
 
 

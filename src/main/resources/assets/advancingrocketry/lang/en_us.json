@@ -9,10 +9,13 @@
 
   "block.advancingrocketry.steel_block": "Steel Block",
   "block.advancingrocketry.fuel_tank": "Fuel Tank",
+  "block.advancingrocketry.chair": "Steel Chair",
+  "block.advancingrocketry.model_rocket": "Model Rocket",
 
   "creativetab.advancingrocketry.rocket_supplies": "Rocket Supplies",
   "creativetab.advancingrocketry.rocket_tools": "Rocket Tools",
   "creativetab.advancingrocketry.rocket_liquid": "Rocket Liquid",
+  "creativetab.advancingrocketry.rockets": "Rockets",
 
   "painting.advancingrocketry.saw_them.title": "Saw Them",
   "painting.advancingrocketry.saw_them.author": "DareToDream",

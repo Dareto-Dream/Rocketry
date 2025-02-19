@@ -1,6 +1,9 @@
 package com.dareto.advancingrocketry.block;
 
 import com.dareto.advancingrocketry.AdvancingRocketry;
+import com.dareto.advancingrocketry.block.custom.ChairBlock;
+import com.dareto.advancingrocketry.block.custom.FuelTankBlock;
+import com.dareto.advancingrocketry.block.custom.RocketBaseBlock;
 import com.dareto.advancingrocketry.fluid.ModFluids;
 import com.dareto.advancingrocketry.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -14,6 +17,8 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.function.Supplier;
 
 /**
  * Handles all block registrations for the Advancing Rocketry mod.
@@ -30,8 +35,8 @@ public class ModBlocks {
                     .sound(SoundType.NETHERITE_BLOCK)));
 
     // Fuel Tank
-    public static final RegistryObject<Block> FUEL_TANK = BLOCKS.register("fuel_tank",
-            () -> new Block(BlockBehaviour.Properties.of()
+    public static final RegistryObject<Block> FUEL_TANK = registerBlock("fuel_tank",
+            () -> new FuelTankBlock(BlockBehaviour.Properties.of()
                     .strength(3f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.NETHER_BRICKS)));
@@ -40,7 +45,21 @@ public class ModBlocks {
     public static final RegistryObject<LiquidBlock> CRUDE_OIL_BLOCK = BLOCKS.register("crude_oil_block",
             () -> new LiquidBlock(ModFluids.SOURCE_CRUDE_OIL, BlockBehaviour.Properties.ofFullCopy(Blocks.WATER)));
 
+    // the chair
+    public static final RegistryObject<Block> CHAIR = registerBlock("chair",
+            () -> new ChairBlock(BlockBehaviour.Properties.of().noOcclusion()));
 
+    // the Rocket Base
+    public static final RegistryObject<Block> MODEL_ROCKET = registerBlock("model_rocket",
+            () -> new RocketBaseBlock(BlockBehaviour.Properties.of().noOcclusion()));
+
+
+    //Register blocks
+    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        registerBlockItem(name, toReturn);
+        return toReturn;
+    }
 
     // 🔗 Register Block Items
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
@@ -50,7 +69,6 @@ public class ModBlocks {
     static {
         // Register block items for each block
         registerBlockItem("steel_block", STEEL_BLOCK);
-        registerBlockItem("fuel_tank", FUEL_TANK);
     }
 
 

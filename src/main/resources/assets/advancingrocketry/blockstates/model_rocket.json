@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "advancingrocketry:block/model_rocket"
+    },
+    "facing=south": {
+      "model": "advancingrocketry:block/model_rocket",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "advancingrocketry:block/model_rocket",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "advancingrocketry:block/model_rocket",
+      "y": 270
+    }
+  }
+}

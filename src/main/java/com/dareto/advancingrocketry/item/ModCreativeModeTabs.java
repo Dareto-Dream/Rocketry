@@ -34,6 +34,8 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.STEEL.get());
                         output.accept(ModBlocks.STEEL_BLOCK.get());
+                        output.accept(ModBlocks.CHAIR.get());
+
 
 
                     }).build());
@@ -44,6 +46,17 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.advancingrocketry.rocket_liquid"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.CRUDE_OIL_BUCKET.get());
+
+
+                    }).build());
+
+    public static final RegistryObject<CreativeModeTab> ROCKETS = CREATIVE_MODE_TABS.register("rockets",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.MODEL_ROCKET.get()))
+                    .withTabsBefore(ROCKET_LIQUID_TAB.getId())
+                    .title(Component.translatable("creativetab.advancingrocketry.rockets"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModBlocks.MODEL_ROCKET.get());
+
 
 
                     }).build());

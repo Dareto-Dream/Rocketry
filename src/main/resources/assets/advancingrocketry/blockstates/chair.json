@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "advancingrocketry:block/chair"
+    },
+    "facing=south": {
+      "model": "advancingrocketry:block/chair",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "advancingrocketry:block/chair",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "advancingrocketry:block/chair",
+      "y": 270
+    }
+  }
+}
