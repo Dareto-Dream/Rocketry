@@ -1,6 +1,8 @@
 package com.dareto.advancingrocketry;
 
 import com.dareto.advancingrocketry.block.ModBlocks;
+import com.dareto.advancingrocketry.entity.ModEntities;
+import com.dareto.advancingrocketry.entity.client.SpaceDroneRenderer;
 import com.dareto.advancingrocketry.fluid.ModFluidTypes;
 import com.dareto.advancingrocketry.fluid.ModFluids;
 import com.dareto.advancingrocketry.item.ModCreativeModeTabs;
@@ -8,6 +10,7 @@ import com.dareto.advancingrocketry.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -36,6 +39,8 @@ public class AdvancingRocketry {
         ModFluids.register(modEventBus);
         ModFluidTypes.register(modEventBus);
 
+        ModEntities.register(modEventBus);
+
         MinecraftForge.EVENT_BUS.register(this);
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
@@ -51,6 +56,8 @@ public class AdvancingRocketry {
         public static void onClientSetup(FMLClientSetupEvent event) {
             ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_CRUDE_OIL.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_CRUDE_OIL.get(), RenderType.translucent());
+
+            EntityRenderers.register(ModEntities.SPACE_DRONE.get(), SpaceDroneRenderer::new);
         }
     }
 }

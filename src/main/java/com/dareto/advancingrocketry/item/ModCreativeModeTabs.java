@@ -61,6 +61,17 @@ public class ModCreativeModeTabs {
 
                     }).build());
 
+    public static final RegistryObject<CreativeModeTab> DRONES = CREATIVE_MODE_TABS.register("drones",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SPACEDRONE_SPAWN_EGG.get()))
+                    .withTabsBefore(ROCKETS.getId())
+                    .title(Component.translatable("creativetab.advancingrocketry.drones"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModItems.SPACEDRONE_SPAWN_EGG.get());
+
+
+
+                    }).build());
+
 
 
     public static void register(IEventBus eventBus) {
