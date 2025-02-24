@@ -6,16 +6,16 @@
       "item": "advancingrocketry:steel"
     },
     "B": {
-      "item": "minecraft:stick"
+      "item": "minecraft:iron_ingot"
     },
     "C": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:stick"
     }
   },
   "pattern": [
-    " C ",
     " A ",
-    " B "
+    " B ",
+    " C "
   ],
   "result": {
     "count": 1,

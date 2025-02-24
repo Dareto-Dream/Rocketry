@@ -14,6 +14,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 import java.util.Collections;
+import java.util.DuplicateFormatFlagsException;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 

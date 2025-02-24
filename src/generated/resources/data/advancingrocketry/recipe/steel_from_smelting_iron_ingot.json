@@ -2,7 +2,8 @@
   "type": "minecraft:smelting",
   "category": "misc",
   "cookingtime": 200,
-  "experience": 0.2,
+  "experience": 0.25,
+  "group": "steel",
   "ingredient": {
     "item": "minecraft:iron_ingot"
   },

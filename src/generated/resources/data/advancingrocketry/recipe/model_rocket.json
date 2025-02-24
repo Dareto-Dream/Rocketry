@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "advancingrocketry:steel_block"
+    },
+    "B": {
+      "item": "advancingrocketry:fuel_tank"
+    },
+    "C": {
+      "item": "minecraft:iron_bars"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "ABA",
+    "CAC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "advancingrocketry:model_rocket"
+  }
+}

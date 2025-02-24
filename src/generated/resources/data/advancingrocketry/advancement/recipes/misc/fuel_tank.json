@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_steel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "advancingrocketry:steel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "advancingrocketry:fuel_tank"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_steel"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "advancingrocketry:fuel_tank"
+    ]
+  }
+}

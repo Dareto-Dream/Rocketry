@@ -1,0 +1,4 @@
+// 1.21	2025-02-23T17:09:28.6231637	Tags for minecraft:block mod id advancingrocketry
+ebbf548a6adc023292ce175fb80de8bd814a49a0 data/minecraft/tags/block/mineable/pickaxe.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/block/needs_diamond_tool.json
+5726e187375952285adc73a97f40cac10276b262 data/minecraft/tags/block/needs_iron_tool.json

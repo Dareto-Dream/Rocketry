@@ -66,7 +66,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("CAC")
                 .define('A', ModBlocks.STEEL_BLOCK.get())
                 .define('B', ModBlocks.FUEL_TANK.get())
-                .define('B', Items.IRON_BARS)
+                .define('C', Items.IRON_BARS)
                 .unlockedBy(getHasName(ModItems.STEEL.get()), has(ModItems.STEEL.get())).save(pRecipeOutput);
 
         oreSmelting(pRecipeOutput, STEEL_SMELTABLES, RecipeCategory.MISC, ModItems.STEEL.get(), 0.25f, 200, "steel");
