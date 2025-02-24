@@ -18,6 +18,8 @@
   "creativetab.advancingrocketry.rockets": "Rockets",
   "creativetab.advancingrocketry.drones": "Drones",
 
+  "item.advancingrocketry.spacedrone_spawn_egg": "Space Drone Spawn Egg",
+
   "painting.advancingrocketry.saw_them.title": "Saw Them",
   "painting.advancingrocketry.saw_them.author": "DareToDream",
   "painting.advancingrocketry.the_abyss.title": "The Abyss",
@@ -25,5 +27,7 @@
   "painting.advancingrocketry.hollow.title": "See Past",
   "painting.advancingrocketry.hollow.author": "Lemon Cardboard",
   "painting.advancingrocketry.howling.title": "The Terror",
-  "painting.advancingrocketry.howling.author": "The Gunman"
+  "painting.advancingrocketry.howling.author": "The Gunman",
+
+  "entity.advancingrocketry.spacedrone": "Space Drone"
 }
