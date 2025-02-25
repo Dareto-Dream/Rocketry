@@ -1,6 +1,7 @@
 package com.dareto.advancingrocketry.entity;
 
 import com.dareto.advancingrocketry.AdvancingRocketry;
+import com.dareto.advancingrocketry.entity.custom.ChairEntity;
 import com.dareto.advancingrocketry.entity.custom.CyborgEntity;
 import com.dareto.advancingrocketry.entity.custom.SpaceDroneEntity;
 import net.minecraft.world.entity.EntityType;
@@ -21,6 +22,10 @@ public class ModEntities {
     public static final RegistryObject<EntityType<CyborgEntity>> CYBORG =
             ENTITY_TYPES.register("cyborg", () -> EntityType.Builder.of(CyborgEntity::new, MobCategory.CREATURE)
                     .sized(1f, 4.5f).build("cyborg"));
+
+    public static final RegistryObject<EntityType<ChairEntity>> CHAIR =
+            ENTITY_TYPES.register("chair_entity", () -> EntityType.Builder.of(ChairEntity::new, MobCategory.CREATURE)
+                    .sized(0.5f, 0.5f).build("chair_entity"));
 
 
     public static void register(IEventBus eventBus) {

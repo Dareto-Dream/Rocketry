@@ -2,6 +2,7 @@ package com.dareto.advancingrocketry;
 
 import com.dareto.advancingrocketry.block.ModBlocks;
 import com.dareto.advancingrocketry.entity.ModEntities;
+import com.dareto.advancingrocketry.entity.client.ChairRenderer;
 import com.dareto.advancingrocketry.entity.client.CyborgRenderer;
 import com.dareto.advancingrocketry.entity.client.SpaceDroneRenderer;
 import com.dareto.advancingrocketry.fluid.ModFluidTypes;
@@ -60,6 +61,7 @@ public class AdvancingRocketry {
 
             EntityRenderers.register(ModEntities.SPACE_DRONE.get(), SpaceDroneRenderer::new);
             EntityRenderers.register(ModEntities.CYBORG.get(), CyborgRenderer::new);
+            EntityRenderers.register(ModEntities.CHAIR.get(), ChairRenderer::new);
         }
     }
 }
