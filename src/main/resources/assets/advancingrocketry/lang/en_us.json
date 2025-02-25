@@ -19,6 +19,7 @@
   "creativetab.advancingrocketry.drones": "Drones",
 
   "item.advancingrocketry.spacedrone_spawn_egg": "Space Drone Spawn Egg",
+  "item.advancingrocketry.cyborg_spawn_egg": "Cyborg Spawn Egg",
 
   "painting.advancingrocketry.saw_them.title": "Saw Them",
   "painting.advancingrocketry.saw_them.author": "DareToDream",
@@ -29,5 +30,6 @@
   "painting.advancingrocketry.howling.title": "The Terror",
   "painting.advancingrocketry.howling.author": "The Gunman",
 
-  "entity.advancingrocketry.spacedrone": "Space Drone"
+  "entity.advancingrocketry.spacedrone": "Space Drone",
+  "entity.advancingrocketry.cyborg": "Cyborg"
 }

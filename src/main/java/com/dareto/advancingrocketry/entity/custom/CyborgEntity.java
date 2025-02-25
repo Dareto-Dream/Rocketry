@@ -1,8 +1,10 @@
 package com.dareto.advancingrocketry.entity.custom;
 
+import com.dareto.advancingrocketry.block.ModBlocks;
 import com.dareto.advancingrocketry.entity.ModEntities;
 import com.dareto.advancingrocketry.entity.client.CyborgAnimations;
 import com.dareto.advancingrocketry.item.ModItems;
+import net.minecraft.client.animation.AnimationDefinition;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
@@ -24,11 +26,11 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
-public class SpaceDroneEntity extends Animal {
+public class CyborgEntity extends Animal {
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
 
-    public SpaceDroneEntity(EntityType<? extends Animal> pEntityType, Level pLevel) {
+    public CyborgEntity(EntityType<? extends Animal> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
 
@@ -36,32 +38,32 @@ public class SpaceDroneEntity extends Animal {
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
 
-        this.goalSelector.addGoal(1, new PanicGoal(this, 2.0));
-        this.goalSelector.addGoal(2, new BreedGoal(this, 1.0));
-        this.goalSelector.addGoal(3, new TemptGoal(this, 1.25, stack -> stack.is(ModItems.STEEL.get()), false));
+        this.goalSelector.addGoal(1, new WaterAvoidingRandomStrollGoal(this, 1.0));
 
-        this.goalSelector.addGoal(4, new FollowParentGoal(this, 1.25));
+        this.goalSelector.addGoal(2, new PanicGoal(this, 2.0));
+        this.goalSelector.addGoal(3, new BreedGoal(this, 1.0));
+        this.goalSelector.addGoal(4, new TemptGoal(this, 1.25, stack -> stack.is(ModItems.ROCKET_FUEL.get()), false));
 
-        this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 1.0));
+        this.goalSelector.addGoal(5, new FollowParentGoal(this, 1.25));
         this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 6.0F));
         this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
     }
 
     public static AttributeSupplier.Builder createAttributes() {
         return Animal.createLivingAttributes()
-                .add(Attributes.MAX_HEALTH, 30D)
+                .add(Attributes.MAX_HEALTH, 50D)
                 .add(Attributes.MOVEMENT_SPEED, 0.35D)
                 .add(Attributes.FOLLOW_RANGE, 24D);
     }
 
     @Override
     public boolean isFood(ItemStack pStack) {
-        return pStack.is(ModItems.STEEL.get());
+        return pStack.is(ModItems.ROCKET_FUEL.get());
     }
 
     @Override
     public @Nullable AgeableMob getBreedOffspring(ServerLevel pLevel, AgeableMob pOtherParent) {
-        return ModEntities.SPACE_DRONE.get().create(pLevel);
+        return ModEntities.CYBORG.get().create(pLevel);
     }
 
     private void setupAnimationStates() {
@@ -74,36 +76,28 @@ public class SpaceDroneEntity extends Animal {
     }
 
     @Override
+    protected SoundEvent getAmbientSound() {
+        return SoundEvents.BEACON_ACTIVATE;
+    }
+
+    @Override
+    protected SoundEvent getHurtSound(DamageSource damageSource) {
+        return SoundEvents.IRON_GOLEM_HURT;
+    }
+
+    @Override
+    protected SoundEvent getDeathSound() {
+        return SoundEvents.IRON_GOLEM_DEATH;
+    }
+
+    @Override
     public void tick() {
         super.tick();
 
         if(this.level().isClientSide()) {
             this.setupAnimationStates();
         }
-
-        for (int i = 0; i < this.random.nextInt(2) + 1; i++) {
-            this.spawnFluidParticle(
-                    this.level(),
-                    this.getX() - 0.3F,
-                    this.getX() + 0.3F,
-                    this.getZ() - 0.3F,
-                    this.getZ() + 0.3F,
-                    this.getY(0.5),
-                    ParticleTypes.ASH
-            );
-        }
     }
 
 
-    private void spawnFluidParticle(Level pLevel, double pStartX, double pEndX, double pStartZ, double pEndZ, double pPosY, ParticleOptions pParticleOption) {
-        pLevel.addParticle(
-                pParticleOption,
-                Mth.lerp(pLevel.random.nextDouble(), pStartX, pEndX),
-                pPosY,
-                Mth.lerp(pLevel.random.nextDouble(), pStartZ, pEndZ),
-                0.0,
-                0.0,
-                0.0
-        );
-    }
 }

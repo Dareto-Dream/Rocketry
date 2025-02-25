@@ -33,6 +33,9 @@ public class ModItems {
     public static final RegistryObject<Item> SPACEDRONE_SPAWN_EGG = ITEMS.register("spacedrone_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.SPACE_DRONE, 0x53524b, 0xdac741, new Item.Properties()));
 
+    public static final RegistryObject<Item> CYBORG_SPAWN_EGG = ITEMS.register("cyborg_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.CYBORG, 0x53524b, 0x53c741, new Item.Properties()));
+
 
 
 

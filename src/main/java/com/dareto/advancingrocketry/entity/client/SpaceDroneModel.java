@@ -11,7 +11,6 @@ import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
-import net.minecraft.world.entity.Entity;
 
 public class SpaceDroneModel<T extends SpaceDroneEntity> extends HierarchicalModel<T> {
     // This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
@@ -19,20 +18,18 @@ public class SpaceDroneModel<T extends SpaceDroneEntity> extends HierarchicalMod
     private final ModelPart bone;
     private final ModelPart propellars;
     private final ModelPart body;
-    private final ModelPart eyes;
 
     public SpaceDroneModel(ModelPart root) {
         this.bone = root.getChild("bone");
         this.propellars = this.bone.getChild("propellars");
         this.body = this.bone.getChild("body");
-        this.eyes = bone.getChild("body").getChild("eyes");
     }
 
     public static LayerDefinition createBodyLayer() {
         MeshDefinition meshdefinition = new MeshDefinition();
         PartDefinition partdefinition = meshdefinition.getRoot();
 
-        PartDefinition bone = partdefinition.addOrReplaceChild("bone", CubeListBuilder.create(), PartPose.offset(0.0F, 13.0F, 0.0F));
+        PartDefinition bone = partdefinition.addOrReplaceChild("bone", CubeListBuilder.create(), PartPose.offsetAndRotation(0.0F, 13.0F, 0.0F, 0.0F, -1.5708F, 0.0F));
 
         PartDefinition propellars = bone.addOrReplaceChild("propellars", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
 

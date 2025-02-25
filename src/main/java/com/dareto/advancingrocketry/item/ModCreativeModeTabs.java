@@ -67,6 +67,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.advancingrocketry.drones"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.SPACEDRONE_SPAWN_EGG.get());
+                        output.accept(ModItems.CYBORG_SPAWN_EGG.get());
 
 
 

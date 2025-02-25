@@ -20,5 +20,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.CRUDE_OIL_BUCKET.get());
 
         withExistingParent(ModItems.SPACEDRONE_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.CYBORG_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 }

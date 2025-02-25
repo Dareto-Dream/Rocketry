@@ -21,8 +21,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(RecipeOutput pRecipeOutput) {
-        List<ItemLike> STEEL_SMELTABLES = List.of(ModItems.STEEL.get(),
-                Items.IRON_INGOT);
+        List<ItemLike> STEEL_SMELTABLES = List.of(Items.IRON_INGOT);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STEEL_BLOCK.get())
                 .pattern("AAA")
