@@ -21,7 +21,7 @@ public class ModEntities {
 
     public static final RegistryObject<EntityType<CyborgEntity>> CYBORG =
             ENTITY_TYPES.register("cyborg", () -> EntityType.Builder.of(CyborgEntity::new, MobCategory.CREATURE)
-                    .sized(1f, 4.5f).build("cyborg"));
+                    .sized(0.75f, 3f).build("cyborg"));
 
     public static final RegistryObject<EntityType<ChairEntity>> CHAIR =
             ENTITY_TYPES.register("chair_entity", () -> EntityType.Builder.of(ChairEntity::new, MobCategory.CREATURE)

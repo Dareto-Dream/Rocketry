@@ -68,7 +68,7 @@ public class CyborgEntity extends Animal {
 
     private void setupAnimationStates() {
         if(this.idleAnimationTimeout <= 0) {
-            this.idleAnimationTimeout = 20;
+            this.idleAnimationTimeout = 40;
             this.idleAnimationState.start(this.tickCount);
         } else {
             --this.idleAnimationTimeout;
