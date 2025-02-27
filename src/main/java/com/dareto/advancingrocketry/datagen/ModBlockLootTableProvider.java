@@ -34,6 +34,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.CHAIR.get());
         dropSelf(ModBlocks.MODEL_ROCKET.get());
 
+        dropSelf(ModBlocks.FUEL_TANK.get());
+
         /*this.add(ModBlocks.ALEXANDRITE_ORE.get(),
                 block -> createOreDrop(ModBlocks.ALEXANDRITE_ORE.get(), ModItems.RAW_ALEXANDRITE.get()));
         this.add(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get(),

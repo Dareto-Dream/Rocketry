@@ -1,6 +1,7 @@
 package com.dareto.advancingrocketry;
 
 import com.dareto.advancingrocketry.block.ModBlocks;
+import com.dareto.advancingrocketry.block.entity.ModBlockEntities;
 import com.dareto.advancingrocketry.entity.ModEntities;
 import com.dareto.advancingrocketry.entity.client.ChairRenderer;
 import com.dareto.advancingrocketry.entity.client.CyborgRenderer;
@@ -9,7 +10,10 @@ import com.dareto.advancingrocketry.fluid.ModFluidTypes;
 import com.dareto.advancingrocketry.fluid.ModFluids;
 import com.dareto.advancingrocketry.item.ModCreativeModeTabs;
 import com.dareto.advancingrocketry.item.ModItems;
+import com.dareto.advancingrocketry.screen.FuelTankScreen;
+import com.dareto.advancingrocketry.screen.ModMenuTypes;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
@@ -43,6 +47,9 @@ public class AdvancingRocketry {
 
         ModEntities.register(modEventBus);
 
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+
         MinecraftForge.EVENT_BUS.register(this);
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
@@ -62,6 +69,14 @@ public class AdvancingRocketry {
             EntityRenderers.register(ModEntities.SPACE_DRONE.get(), SpaceDroneRenderer::new);
             EntityRenderers.register(ModEntities.CYBORG.get(), CyborgRenderer::new);
             EntityRenderers.register(ModEntities.CHAIR.get(), ChairRenderer::new);
+
+            MenuScreens.register(ModMenuTypes.FUEL_TANK_MENU.get(), FuelTankScreen::new);
         }
     }
 }
+
+/*
+You know sometimes when im lonely, i stick it in bologna
+And sometimes when im lovesick, i rub it out on my own d*ck
+I like to look at the wall, as i rub out my ball
+ */
