@@ -11,6 +11,7 @@ import com.dareto.advancingrocketry.fluid.ModFluids;
 import com.dareto.advancingrocketry.item.ModCreativeModeTabs;
 import com.dareto.advancingrocketry.item.ModItems;
 import com.dareto.advancingrocketry.screen.FuelDistillerScreen;
+import com.dareto.advancingrocketry.screen.FuelTankScreen;
 import com.dareto.advancingrocketry.screen.ModMenuTypes;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -71,6 +72,7 @@ public class AdvancingRocketry {
             EntityRenderers.register(ModEntities.CHAIR.get(), ChairRenderer::new);
 
             MenuScreens.register(ModMenuTypes.FUEL_DISTILLER_MENU.get(), FuelDistillerScreen::new);
+            MenuScreens.register(ModMenuTypes.FUEL_TANK_MENU.get(), FuelTankScreen::new);
         }
     }
 }

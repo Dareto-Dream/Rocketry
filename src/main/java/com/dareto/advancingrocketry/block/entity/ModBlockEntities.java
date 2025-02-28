@@ -17,6 +17,11 @@ public class ModBlockEntities {
                     () -> BlockEntityType.Builder.of(FuelDistillerBlockEntity::new,
                             ModBlocks.FUEL_DISTILLER.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<FuelTankBlockEntity>>  FUEL_TANK_BE =
+            BLOCK_ENTITIES.register("fuel_tank_be",
+                    () -> BlockEntityType.Builder.of(FuelTankBlockEntity::new,
+                            ModBlocks.FUEL_TANK.get()).build(null));
+
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

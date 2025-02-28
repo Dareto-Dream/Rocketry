@@ -23,7 +23,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.MODEL_ROCKET.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.STEEL_BLOCK.get());
+                .add(ModBlocks.STEEL_BLOCK.get())
+                .add(ModBlocks.FUEL_TANK.get());
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 //.add(ModBlocks.RAW_ALEXANDRITE_BLOCK.get())

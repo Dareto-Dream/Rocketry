@@ -43,7 +43,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('C', Items.STICK)
                 .unlockedBy(getHasName(ModItems.STEEL.get()), has(ModItems.STEEL.get())).save(pRecipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.FUEL_DISTILLER.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.FUEL_TANK.get())
                 .pattern("AAA")
                 .pattern("ABA")
                 .pattern("AAA")
