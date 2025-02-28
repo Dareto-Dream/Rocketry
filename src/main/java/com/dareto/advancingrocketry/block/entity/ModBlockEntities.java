@@ -12,10 +12,10 @@ public class ModBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, AdvancingRocketry.MOD_ID);
 
-    public static final RegistryObject<BlockEntityType<FuelTankBlockEntity>>  FUEL_TANK_BE =
-            BLOCK_ENTITIES.register("fuel_tank_be",
-                    () -> BlockEntityType.Builder.of(FuelTankBlockEntity::new,
-                            ModBlocks.FUEL_TANK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<FuelDistillerBlockEntity>>  FUEL_DISTILLER_BE =
+            BLOCK_ENTITIES.register("fuel_distiller_be",
+                    () -> BlockEntityType.Builder.of(FuelDistillerBlockEntity::new,
+                            ModBlocks.FUEL_DISTILLER.get()).build(null));
 
 
     public static void register(IEventBus eventBus) {

@@ -1,11 +1,10 @@
 package com.dareto.advancingrocketry.block.entity;
 
 import com.dareto.advancingrocketry.item.ModItems;
-import com.dareto.advancingrocketry.screen.FuelTankMenu;
+import com.dareto.advancingrocketry.screen.FuelDistillerMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.component.DataComponentMap;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.Containers;
@@ -19,7 +18,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
@@ -29,7 +27,7 @@ import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class FuelTankBlockEntity extends BlockEntity implements MenuProvider {
+public class FuelDistillerBlockEntity extends BlockEntity implements MenuProvider {
     private final ItemStackHandler itemHandler = new ItemStackHandler(2);
 
     private static final int INPUT_SLOT = 0;
@@ -41,14 +39,14 @@ public class FuelTankBlockEntity extends BlockEntity implements MenuProvider {
     private int progress = 0;
     private int maxProgress = 78;
 
-    public FuelTankBlockEntity(BlockPos pPos, BlockState pBlockState) {
-        super(ModBlockEntities.FUEL_TANK_BE.get(), pPos, pBlockState);
+    public FuelDistillerBlockEntity(BlockPos pPos, BlockState pBlockState) {
+        super(ModBlockEntities.FUEL_DISTILLER_BE.get(), pPos, pBlockState);
         this.data = new ContainerData() {
             @Override
             public int get(int pIndex) {
                 return switch (pIndex) {
-                    case 0 -> FuelTankBlockEntity.this.progress;
-                    case 1 -> FuelTankBlockEntity.this.maxProgress;
+                    case 0 -> FuelDistillerBlockEntity.this.progress;
+                    case 1 -> FuelDistillerBlockEntity.this.maxProgress;
                     default -> 0;
                 };
             }
@@ -56,8 +54,8 @@ public class FuelTankBlockEntity extends BlockEntity implements MenuProvider {
             @Override
             public void set(int pIndex, int pValue) {
                 switch (pIndex) {
-                    case 0 -> FuelTankBlockEntity.this.progress = pValue;
-                    case 1 -> FuelTankBlockEntity.this.maxProgress = pValue;
+                    case 0 -> FuelDistillerBlockEntity.this.progress = pValue;
+                    case 1 -> FuelDistillerBlockEntity.this.maxProgress = pValue;
                 };
             }
 
@@ -100,18 +98,18 @@ public class FuelTankBlockEntity extends BlockEntity implements MenuProvider {
 
     @Override
     public Component getDisplayName() {
-        return Component.translatable("block.advancingrocketry.fuel_tank");
+        return Component.translatable("block.advancingrocketry.fuel_distiller");
     }
 
     @Override
     public @Nullable AbstractContainerMenu createMenu(int pContainerId, Inventory pPlayerInventory, Player pPlayer) {
-        return new FuelTankMenu(pContainerId, pPlayerInventory, (BlockEntity) this, this.data);
+        return new FuelDistillerMenu(pContainerId, pPlayerInventory, (BlockEntity) this, this.data);
     }
 
     @Override
     protected void saveAdditional(CompoundTag pTag, HolderLookup.Provider pRegistries) {
         pTag.put("inventory", itemHandler.serializeNBT(pRegistries));
-        pTag.putInt("fuel_tank.progress", progress);
+        pTag.putInt("fuel_distiller.progress", progress);
 
         super.saveAdditional(pTag, pRegistries);
     }
@@ -120,7 +118,7 @@ public class FuelTankBlockEntity extends BlockEntity implements MenuProvider {
     protected void loadAdditional(CompoundTag pTag, HolderLookup.Provider pRegistries) {
         super.loadAdditional(pTag, pRegistries);
         itemHandler.deserializeNBT(pRegistries, pTag.getCompound("inventory"));
-        progress = pTag.getInt("fuel_tank.progress");
+        progress = pTag.getInt("fuel_distiller.progress");
     }
 
     public void tick(Level pLevel, BlockPos pPos, BlockState pState) {

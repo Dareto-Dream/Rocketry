@@ -9,11 +9,11 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
-public class FuelTankScreen extends AbstractContainerScreen<FuelTankMenu> {
+public class FuelDistillerScreen extends AbstractContainerScreen<FuelDistillerMenu> {
     private static final ResourceLocation TEXTURE =
-            ResourceLocation.fromNamespaceAndPath(AdvancingRocketry.MOD_ID, "textures/gui/fuel_tank_gui.png");
+            ResourceLocation.fromNamespaceAndPath(AdvancingRocketry.MOD_ID, "textures/gui/fuel_distiller_gui.png");
 
-    public FuelTankScreen(FuelTankMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
+    public FuelDistillerScreen(FuelDistillerMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);
     }
 

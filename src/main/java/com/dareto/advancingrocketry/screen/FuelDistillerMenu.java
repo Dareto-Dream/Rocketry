@@ -1,7 +1,7 @@
 package com.dareto.advancingrocketry.screen;
 
 import com.dareto.advancingrocketry.block.ModBlocks;
-import com.dareto.advancingrocketry.block.entity.FuelTankBlockEntity;
+import com.dareto.advancingrocketry.block.entity.FuelDistillerBlockEntity;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -11,21 +11,20 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.items.SlotItemHandler;
-import org.jetbrains.annotations.Nullable;
 
-public class FuelTankMenu extends AbstractContainerMenu {
-    public final FuelTankBlockEntity blockEntity;
+public class FuelDistillerMenu extends AbstractContainerMenu {
+    public final FuelDistillerBlockEntity blockEntity;
     private final Level level;
     private final ContainerData data;
 
-    public FuelTankMenu(int pContainerId, Inventory inv, FriendlyByteBuf extraData) {
+    public FuelDistillerMenu(int pContainerId, Inventory inv, FriendlyByteBuf extraData) {
         this(pContainerId, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(2));
     }
 
-    public FuelTankMenu(int pContainerId, Inventory inv, BlockEntity entity, ContainerData data) {
-        super(ModMenuTypes.FUEL_TANK_MENU.get(), pContainerId);
+    public FuelDistillerMenu(int pContainerId, Inventory inv, BlockEntity entity, ContainerData data) {
+        super(ModMenuTypes.FUEL_DISTILLER_MENU.get(), pContainerId);
         checkContainerSize(inv, 2);
-        blockEntity = ((FuelTankBlockEntity) entity);
+        blockEntity = ((FuelDistillerBlockEntity) entity);
         this.level = inv.player.level();
         this.data = data;
 
@@ -105,7 +104,7 @@ public class FuelTankMenu extends AbstractContainerMenu {
     @Override
     public boolean stillValid(Player pPlayer) {
         return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()),
-                pPlayer, ModBlocks.FUEL_TANK.get());
+                pPlayer, ModBlocks.FUEL_DISTILLER.get());
     }
 
     private void addPlayerInventory(Inventory playerInventory) {

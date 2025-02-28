@@ -4,7 +4,6 @@ import com.dareto.advancingrocketry.AdvancingRocketry;
 import com.dareto.advancingrocketry.entity.ModEntities;
 import com.dareto.advancingrocketry.fluid.ModFluids;
 import com.dareto.advancingrocketry.item.custom.ChiselItem;
-import com.dareto.advancingrocketry.item.custom.RocketFuelItem;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -22,7 +21,7 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> ROCKET_FUEL = ITEMS.register("rocket_fuel",
-            () -> new RocketFuelItem(new Item.Properties().durability(1)));
+            () -> new Item(new Item.Properties().durability(1)));
 
     public static final RegistryObject<Item> CHISEL = ITEMS.register("chisel",
             () -> new ChiselItem(new Item.Properties().durability(32)));

@@ -1,6 +1,6 @@
 package com.dareto.advancingrocketry.block.custom;
 
-import com.dareto.advancingrocketry.block.entity.FuelTankBlockEntity;
+import com.dareto.advancingrocketry.block.entity.FuelDistillerBlockEntity;
 import com.dareto.advancingrocketry.block.entity.ModBlockEntities;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
@@ -20,10 +20,10 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-public class FuelTankBlock extends BaseEntityBlock {
-    public static final VoxelShape SHAPE = FuelTankBlock.box(0, 0, 0, 16, 16, 16);
+public class FuelDistillerBlock extends BaseEntityBlock {
+    public static final VoxelShape SHAPE = FuelDistillerBlock.box(1, 0, 1, 15, 16, 15);
 
-    public FuelTankBlock(Properties pProperties) {
+    public FuelDistillerBlock(Properties pProperties) {
         super(pProperties);
     }
 
@@ -46,8 +46,8 @@ public class FuelTankBlock extends BaseEntityBlock {
     protected void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pMovedByPiston) {
         if (pState.getBlock() != pNewState.getBlock()) {
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
-            if (blockEntity instanceof FuelTankBlockEntity) {
-                ((FuelTankBlockEntity) blockEntity).drops();
+            if (blockEntity instanceof FuelDistillerBlockEntity) {
+                ((FuelDistillerBlockEntity) blockEntity).drops();
             }
         }
 
@@ -58,9 +58,9 @@ public class FuelTankBlock extends BaseEntityBlock {
     protected InteractionResult useWithoutItem(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, BlockHitResult pHitResult) {
         if (!pLevel.isClientSide()) {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
-            if (entity instanceof FuelTankBlockEntity) {
+            if (entity instanceof FuelDistillerBlockEntity) {
                 ServerPlayer serverPlayer = (ServerPlayer) pPlayer; // Cast player to ServerPlayer
-                serverPlayer.openMenu((FuelTankBlockEntity) entity, buf -> buf.writeBlockPos(pPos)); // Send BlockPos
+                serverPlayer.openMenu((FuelDistillerBlockEntity) entity, buf -> buf.writeBlockPos(pPos)); // Send BlockPos
             } else {
                 throw new IllegalStateException("Our Container provider is missing!");
             }
@@ -71,7 +71,7 @@ public class FuelTankBlock extends BaseEntityBlock {
 
     @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
-        return new FuelTankBlockEntity(pPos, pState);
+        return new FuelDistillerBlockEntity(pPos, pState);
     }
 
     @Override
@@ -80,7 +80,7 @@ public class FuelTankBlock extends BaseEntityBlock {
             return null;
         }
 
-        return createTickerHelper(pBlockEntityType, ModBlockEntities.FUEL_TANK_BE.get(),
+        return createTickerHelper(pBlockEntityType, ModBlockEntities.FUEL_DISTILLER_BE.get(),
                 (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));
     }
 }

@@ -20,7 +20,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.advancingrocketry.rocket_tools"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.ROCKET_FUEL.get());
-                        output.accept(ModBlocks.FUEL_TANK.get());
+                        output.accept(ModBlocks.FUEL_DISTILLER.get());
 
                         output.accept(ModItems.CHISEL.get());
 

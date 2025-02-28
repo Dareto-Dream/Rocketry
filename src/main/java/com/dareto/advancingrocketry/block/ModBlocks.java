@@ -2,7 +2,7 @@ package com.dareto.advancingrocketry.block;
 
 import com.dareto.advancingrocketry.AdvancingRocketry;
 import com.dareto.advancingrocketry.block.custom.ChairBlock;
-import com.dareto.advancingrocketry.block.custom.FuelTankBlock;
+import com.dareto.advancingrocketry.block.custom.FuelDistillerBlock;
 import com.dareto.advancingrocketry.block.custom.RocketBaseBlock;
 import com.dareto.advancingrocketry.fluid.ModFluids;
 import com.dareto.advancingrocketry.item.ModItems;
@@ -35,8 +35,8 @@ public class ModBlocks {
                     .sound(SoundType.NETHERITE_BLOCK)));
 
     // Fuel Tank
-    public static final RegistryObject<Block> FUEL_TANK = registerBlock("fuel_tank",
-            () -> new FuelTankBlock(BlockBehaviour.Properties.of()
+    public static final RegistryObject<Block> FUEL_DISTILLER = registerBlock("fuel_distiller",
+            () -> new FuelDistillerBlock(BlockBehaviour.Properties.of()
                     .strength(3f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.NETHER_BRICKS)));

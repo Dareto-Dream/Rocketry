@@ -43,7 +43,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('C', Items.STICK)
                 .unlockedBy(getHasName(ModItems.STEEL.get()), has(ModItems.STEEL.get())).save(pRecipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.FUEL_TANK.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.FUEL_DISTILLER.get())
                 .pattern("AAA")
                 .pattern("ABA")
                 .pattern("AAA")
@@ -64,7 +64,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("ABA")
                 .pattern("CAC")
                 .define('A', ModBlocks.STEEL_BLOCK.get())
-                .define('B', ModBlocks.FUEL_TANK.get())
+                .define('B', ModBlocks.FUEL_DISTILLER.get())
                 .define('C', Items.IRON_BARS)
                 .unlockedBy(getHasName(ModItems.STEEL.get()), has(ModItems.STEEL.get())).save(pRecipeOutput);
 

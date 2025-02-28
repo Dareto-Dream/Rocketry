@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "advancingrocketry:fuel_tank"
+          "name": "advancingrocketry:fuel_distiller"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "advancingrocketry:blocks/fuel_tank"
+  "random_sequence": "advancingrocketry:blocks/fuel_distiller"
 }

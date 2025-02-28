@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "advancingrocketry:fuel_tank"
+        "recipe": "advancingrocketry:fuel_distiller"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "advancingrocketry:fuel_tank"
+      "advancingrocketry:fuel_distiller"
     ]
   }
 }

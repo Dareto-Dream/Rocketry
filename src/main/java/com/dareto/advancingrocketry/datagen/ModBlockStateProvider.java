@@ -18,8 +18,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.STEEL_BLOCK);
 
-        simpleBlockWithItem(ModBlocks.FUEL_TANK.get(),
-                new ModelFile.UncheckedModelFile(modLoc("block/fuel_tank_empty")));
+        simpleBlockWithItem(ModBlocks.FUEL_DISTILLER.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/fuel_distiller_empty")));
 
 
     }
