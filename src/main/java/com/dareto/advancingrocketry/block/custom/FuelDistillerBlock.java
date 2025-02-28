@@ -66,7 +66,7 @@ public class FuelDistillerBlock extends BaseEntityBlock {
             }
         }
 
-        return super.useWithoutItem(pState, pLevel, pPos, pPlayer, pHitResult);
+        return InteractionResult.sidedSuccess(pLevel.isClientSide());
     }
 
     @Override
