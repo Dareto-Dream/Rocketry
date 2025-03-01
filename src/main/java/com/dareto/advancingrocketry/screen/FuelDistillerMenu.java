@@ -13,6 +13,7 @@ import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.items.SlotItemHandler;
 
 public class FuelDistillerMenu extends AbstractContainerMenu {
+    public static int NUMBER_OF_SLOTS = 9;
     public final FuelDistillerBlockEntity blockEntity;
     private final Level level;
     private final ContainerData data;
@@ -23,7 +24,7 @@ public class FuelDistillerMenu extends AbstractContainerMenu {
 
     public FuelDistillerMenu(int pContainerId, Inventory inv, BlockEntity entity, ContainerData data) {
         super(ModMenuTypes.FUEL_DISTILLER_MENU.get(), pContainerId);
-        checkContainerSize(inv, 2);
+        checkContainerSize(inv, NUMBER_OF_SLOTS);
         blockEntity = ((FuelDistillerBlockEntity) entity);
         this.level = inv.player.level();
         this.data = data;
@@ -32,8 +33,22 @@ public class FuelDistillerMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(iItemHandler -> {
-            this.addSlot(new SlotItemHandler(iItemHandler, 0, 80, 11));
-            this.addSlot(new SlotItemHandler(iItemHandler, 1, 80, 59));
+            this.addSlot(new SlotItemHandler(iItemHandler, 0, 80, 9));
+            this.addSlot(new SlotItemHandler(iItemHandler, 1, 127, 9));
+
+            /*
+            this.addSlot(new SlotItemHandler(iItemHandler, 2, 50, 63));
+            this.addSlot(new SlotItemHandler(iItemHandler, 3, 60, 63));
+            this.addSlot(new SlotItemHandler(iItemHandler, 4, 70, 63));
+            this.addSlot(new SlotItemHandler(iItemHandler, 5, 80, 63));
+            this.addSlot(new SlotItemHandler(iItemHandler, 6, 90, 63));
+            this.addSlot(new SlotItemHandler(iItemHandler, 7, 100, 63));
+            this.addSlot(new SlotItemHandler(iItemHandler, 8, 110, 63));
+             */
+
+            for (int i = 0; i <= 6; i++) {
+                this.addSlot(new SlotItemHandler(iItemHandler, i + 2, 26 + (i * 18), 63));
+            }
         });
 
         addDataSlots(data);
@@ -67,7 +82,7 @@ public class FuelDistillerMenu extends AbstractContainerMenu {
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
     // THIS YOU HAVE TO DEFINE!
-    private static final int TE_INVENTORY_SLOT_COUNT = 2;  // must be the number of slots you have!
+    private final int TE_INVENTORY_SLOT_COUNT = NUMBER_OF_SLOTS;  // must be the number of slots you have!
     @Override
     public ItemStack quickMoveStack(Player playerIn, int pIndex) {
         Slot sourceSlot = slots.get(pIndex);

@@ -2,6 +2,7 @@ package com.dareto.advancingrocketry.block.entity;
 
 import com.dareto.advancingrocketry.item.ModItems;
 import com.dareto.advancingrocketry.screen.FuelDistillerMenu;
+import com.dareto.advancingrocketry.screen.FuelDistillerMenu.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
@@ -16,6 +17,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -28,10 +30,17 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class FuelDistillerBlockEntity extends BlockEntity implements MenuProvider {
-    private final ItemStackHandler itemHandler = new ItemStackHandler(2);
+    private final ItemStackHandler itemHandler = new ItemStackHandler(FuelDistillerMenu.NUMBER_OF_SLOTS);
 
     private static final int INPUT_SLOT = 0;
-    private static final int OUTPUT_SLOT = 1;
+    private static final int FUEL_SLOT = 1;
+    private static final int GAS_OUTPUT = 2;
+    private static final int PETROL_OUTPUT = 3;
+    private static final int JET_OUTPUT = 4;
+    private static final int DIESEL_OUTPUT = 5;
+    private static final int HEAVY_OUTPUT_SLOT = 6;
+    private static final int GREASE_OUTPUT = 7;
+    private static final int BITUMEN_OUTPUT = 8;
 
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
 
@@ -142,24 +151,27 @@ public class FuelDistillerBlockEntity extends BlockEntity implements MenuProvide
     private void craftItem() {
         ItemStack result = new ItemStack(ModItems.ROCKET_FUEL.get(), 2);
         this.itemHandler.extractItem(INPUT_SLOT, 1, false);
+        this.itemHandler.extractItem(FUEL_SLOT, 1, false);
 
-        this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(result.getItem(),
-                this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + result.getCount()));
+        this.itemHandler.setStackInSlot(HEAVY_OUTPUT_SLOT, new ItemStack(result.getItem(),
+                this.itemHandler.getStackInSlot(HEAVY_OUTPUT_SLOT).getCount() + result.getCount()));
     }
 
     private boolean hasRecipe() {
-        boolean hasCraftingItem = this.itemHandler.getStackInSlot(INPUT_SLOT).getItem() == ModItems.CRUDE_OIL_BUCKET.get();
+        boolean hasCraftingItem = this.itemHandler.getStackInSlot(INPUT_SLOT).getItem() == ModItems.CRUDE_OIL_BUCKET.get() &&
+                this.itemHandler.getStackInSlot(FUEL_SLOT).getItem() == Items.COAL;
+
         ItemStack result = new ItemStack(ModItems.ROCKET_FUEL.get());
 
         return hasCraftingItem && canInsertAmountIntoOutputSlot(result.getCount()) && canInsertItemIntoOutputSlot(result.getItem());
     }
 
     private boolean canInsertItemIntoOutputSlot(Item item) {
-        return this.itemHandler.getStackInSlot(OUTPUT_SLOT).isEmpty() || this.itemHandler.getStackInSlot(OUTPUT_SLOT).is(item);
+        return this.itemHandler.getStackInSlot(HEAVY_OUTPUT_SLOT).isEmpty() || this.itemHandler.getStackInSlot(HEAVY_OUTPUT_SLOT).is(item);
     }
 
     private boolean canInsertAmountIntoOutputSlot(int count) {
-        return this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + count <= this.itemHandler.getStackInSlot(OUTPUT_SLOT).getMaxStackSize();
+        return this.itemHandler.getStackInSlot(HEAVY_OUTPUT_SLOT).getCount() + count <= this.itemHandler.getStackInSlot(HEAVY_OUTPUT_SLOT).getMaxStackSize();
     }
 
     private boolean hasProgressFinished() {
