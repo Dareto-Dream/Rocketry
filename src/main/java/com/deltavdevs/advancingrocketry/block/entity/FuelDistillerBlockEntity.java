@@ -151,6 +151,7 @@ public class FuelDistillerBlockEntity extends BlockEntity implements MenuProvide
         ItemStack result = new ItemStack(ModItems.ROCKET_FUEL.get(), 2);
         this.itemHandler.extractItem(INPUT_SLOT, 1, false);
         this.itemHandler.extractItem(FUEL_SLOT, 1, false);
+        this.itemHandler.setStackInSlot(INPUT_SLOT, new ItemStack(Items.BUCKET, 1));
 
         this.itemHandler.setStackInSlot(HEAVY_OUTPUT_SLOT, new ItemStack(result.getItem(),
                 this.itemHandler.getStackInSlot(HEAVY_OUTPUT_SLOT).getCount() + result.getCount()));
