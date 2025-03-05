@@ -21,6 +21,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.ROCKET_FUEL.get());
                         output.accept(ModBlocks.FUEL_DISTILLER.get());
+                        output.accept(ModBlocks.FUEL_TANK.get());
 
                         output.accept(ModItems.CHISEL.get());
 
