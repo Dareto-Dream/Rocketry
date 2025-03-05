@@ -1,25 +1,25 @@
-[28Feb2025 06:23:09.855] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 17, --assetsDir, C:\Users\steak\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, advancingrocketry, --all, --output, C:\Users\steak\Documents\GitHub\Rocketry\src\generated\resources, --existing, C:\Users\steak\Documents\GitHub\Rocketry\src\main\resources]
-[28Feb2025 06:23:09.859] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.5+11-LTS
-[28Feb2025 06:23:09.860] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.1 starting: java version 21.0.5 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
-[28Feb2025 06:23:10.111] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
-[28Feb2025 06:23:10.214] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/steak/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=UNKNOWN
-[28Feb2025 06:23:11.446] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[28Feb2025 06:23:12.256] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\steak\.gradle\caches\forge_gradle\assets, --assetIndex, 17, --mod, advancingrocketry, --all, --output, C:\Users\steak\Documents\GitHub\Rocketry\src\generated\resources, --existing, C:\Users\steak\Documents\GitHub\Rocketry\src\main\resources]
-[28Feb2025 06:23:17.636] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 51.0.33, for MC 1.21 with MCP 20240613.102039
-[28Feb2025 06:23:17.636] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v51.0.33 Initialized
-[28Feb2025 06:23:17.669] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
-[28Feb2025 06:23:18.337] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [advancingrocketry]
-[28Feb2025 06:23:18.415] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/steak/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2024.07.28-1.21/forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/assets/.mcassetsroot' uses unexpected schema
-[28Feb2025 06:23:18.415] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/steak/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2024.07.28-1.21/forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/data/.mcassetsroot' uses unexpected schema
-[28Feb2025 06:23:18.566] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[28Feb2025 06:23:18.753] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 186 ms
-[28Feb2025 06:23:18.754] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[28Feb2025 06:23:18.792] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 38 ms
-[28Feb2025 06:23:18.793] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id advancingrocketry
-[28Feb2025 06:23:18.802] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id advancingrocketry finished after 9 ms
-[28Feb2025 06:23:18.803] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: advancingrocketry
-[28Feb2025 06:23:18.810] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: advancingrocketry finished after 6 ms
-[28Feb2025 06:23:18.811] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: advancingrocketry
-[28Feb2025 06:23:18.942] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: advancingrocketry finished after 132 ms
-[28Feb2025 06:23:18.942] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 376 ms
-[28Feb2025 06:23:18.962] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 37, old count: 34, new count: 38, removed stale: 0, written: 11
+[04Mar2025 21:33:00.974] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 17, --assetsDir, C:\Users\steak\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, advancingrocketry, --all, --output, C:\Users\steak\Documents\GitHub\Rocketry\src\generated\resources, --existing, C:\Users\steak\Documents\GitHub\Rocketry\src\main\resources]
+[04Mar2025 21:33:00.985] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.5+11-LTS
+[04Mar2025 21:33:00.986] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.1 starting: java version 21.0.5 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
+[04Mar2025 21:33:01.524] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
+[04Mar2025 21:33:01.635] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/steak/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=UNKNOWN
+[04Mar2025 21:33:02.915] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[04Mar2025 21:33:03.714] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\steak\.gradle\caches\forge_gradle\assets, --assetIndex, 17, --mod, advancingrocketry, --all, --output, C:\Users\steak\Documents\GitHub\Rocketry\src\generated\resources, --existing, C:\Users\steak\Documents\GitHub\Rocketry\src\main\resources]
+[04Mar2025 21:33:09.225] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 51.0.33, for MC 1.21 with MCP 20240613.102039
+[04Mar2025 21:33:09.225] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v51.0.33 Initialized
+[04Mar2025 21:33:09.282] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
+[04Mar2025 21:33:10.220] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [advancingrocketry]
+[04Mar2025 21:33:10.332] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/steak/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2024.07.28-1.21/forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/assets/.mcassetsroot' uses unexpected schema
+[04Mar2025 21:33:10.333] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/steak/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2024.07.28-1.21/forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/data/.mcassetsroot' uses unexpected schema
+[04Mar2025 21:33:10.545] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[04Mar2025 21:33:10.855] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 314 ms
+[04Mar2025 21:33:10.855] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[04Mar2025 21:33:10.906] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 44 ms
+[04Mar2025 21:33:10.906] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id advancingrocketry
+[04Mar2025 21:33:10.913] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id advancingrocketry finished after 7 ms
+[04Mar2025 21:33:10.915] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: advancingrocketry
+[04Mar2025 21:33:10.924] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: advancingrocketry finished after 9 ms
+[04Mar2025 21:33:10.924] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: advancingrocketry
+[04Mar2025 21:33:11.089] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: advancingrocketry finished after 163 ms
+[04Mar2025 21:33:11.089] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 542 ms
+[04Mar2025 21:33:11.100] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 39, old count: 37, new count: 39, removed stale: 1, written: 1

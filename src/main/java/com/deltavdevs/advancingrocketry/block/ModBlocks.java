@@ -55,7 +55,9 @@ public class ModBlocks {
 
     // the chair
     public static final RegistryObject<Block> CHAIR = registerBlock("chair",
-            () -> new ChairBlock(BlockBehaviour.Properties.of().noOcclusion()));
+            () -> new ChairBlock(BlockBehaviour.Properties.of()
+                    .noOcclusion()
+                    .sound(SoundType.NETHERITE_BLOCK)));
 
     // the Rocket Base
     public static final RegistryObject<Block> MODEL_ROCKET = registerBlock("model_rocket",
