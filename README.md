@@ -91,4 +91,24 @@
         
         No further crashes detected when opening inventory screens
 
-If you want to help, message my Discord Tag: <b>Darthdream</b>
+03/4/2025:
+    
+    More Mod Cleanup & Simplification
+        
+        Cleaned up code in Blocks
+
+        simpleified datagen to support tags
+
+    First Official Release
+
+        Mods first official release is out
+
+        Packaged for use in singleplayer and multiplayer
+
+        Server/Client support
+
+        Issues now mainted on git and discord
+
+If you want to help, message my Discord Tag: <b>deltaV0rtex</b>
+
+Any issues can be reported to the [Github Issues Page](https://github.com/Dareto-Dream/Rocketry/issues) or to the **[Discord Server](https://discord.gg/ne6tnZx9KC)**
