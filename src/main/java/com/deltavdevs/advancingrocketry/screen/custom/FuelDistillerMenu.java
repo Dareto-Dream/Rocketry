@@ -1,7 +1,8 @@
-package com.deltavdevs.advancingrocketry.screen;
+package com.deltavdevs.advancingrocketry.screen.custom;
 
 import com.deltavdevs.advancingrocketry.block.ModBlocks;
 import com.deltavdevs.advancingrocketry.block.entity.custom.FuelDistillerBlockEntity;
+import com.deltavdevs.advancingrocketry.screen.ModMenuTypes;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -58,12 +59,12 @@ public class FuelDistillerMenu extends AbstractContainerMenu {
         return data.get(0) > 0;
     }
 
-    public int getScaledProgress() {
+    public int getScaledArrowProgress() {
         int progress = this.data.get(0);
         int maxProgress = this.data.get(1);  // Max Progress
-        int progressArrowSize = 26; // This is the height in pixels of your arrow
+        int arrowPixelSize = 24; // This is the height in pixels of your arrow
 
-        return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
+        return maxProgress != 0 && progress != 0 ? progress * arrowPixelSize / maxProgress : 0;
     }
 
     // CREDIT GOES TO: diesieben07 | https://github.com/diesieben07/SevenCommons

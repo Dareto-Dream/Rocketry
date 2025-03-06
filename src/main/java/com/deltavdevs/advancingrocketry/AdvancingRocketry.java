@@ -11,7 +11,7 @@ import com.deltavdevs.advancingrocketry.fluid.ModFluidTypes;
 import com.deltavdevs.advancingrocketry.fluid.ModFluids;
 import com.deltavdevs.advancingrocketry.item.ModCreativeModeTabs;
 import com.deltavdevs.advancingrocketry.item.ModItems;
-import com.deltavdevs.advancingrocketry.screen.FuelDistillerScreen;
+import com.deltavdevs.advancingrocketry.screen.custom.FuelDistillerScreen;
 import com.deltavdevs.advancingrocketry.screen.ModMenuTypes;
 import com.deltavdevs.advancingrocketry.screen.custom.BiomassProcessorScreen;
 import com.mojang.logging.LogUtils;

@@ -2,12 +2,15 @@ package com.deltavdevs.advancingrocketry.block.entity.custom;
 
 import com.deltavdevs.advancingrocketry.block.entity.ModBlockEntities;
 import com.deltavdevs.advancingrocketry.item.ModItems;
-import com.deltavdevs.advancingrocketry.screen.FuelDistillerMenu;
+import com.deltavdevs.advancingrocketry.screen.custom.FuelDistillerMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -46,7 +49,7 @@ public class FuelDistillerBlockEntity extends BlockEntity implements MenuProvide
 
     protected final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 78;
+    private int maxProgress = 72;
 
     public FuelDistillerBlockEntity(BlockPos pPos, BlockState pBlockState) {
         super(ModBlockEntities.FUEL_DISTILLER_BE.get(), pPos, pBlockState);
@@ -70,7 +73,7 @@ public class FuelDistillerBlockEntity extends BlockEntity implements MenuProvide
 
             @Override
             public int getCount() {
-                return 0;
+                return 2;
             }
         };
 
@@ -119,6 +122,7 @@ public class FuelDistillerBlockEntity extends BlockEntity implements MenuProvide
     protected void saveAdditional(CompoundTag pTag, HolderLookup.Provider pRegistries) {
         pTag.put("inventory", itemHandler.serializeNBT(pRegistries));
         pTag.putInt("fuel_distiller.progress", progress);
+        pTag.putInt("fuel_distiller.max_progress", maxProgress);
 
         super.saveAdditional(pTag, pRegistries);
     }
@@ -126,8 +130,10 @@ public class FuelDistillerBlockEntity extends BlockEntity implements MenuProvide
     @Override
     protected void loadAdditional(CompoundTag pTag, HolderLookup.Provider pRegistries) {
         super.loadAdditional(pTag, pRegistries);
+
         itemHandler.deserializeNBT(pRegistries, pTag.getCompound("inventory"));
         progress = pTag.getInt("fuel_distiller.progress");
+        maxProgress = pTag.getInt("fuel_distiller.max_progress");
     }
 
     public void tick(Level pLevel, BlockPos pPos, BlockState pState) {
@@ -146,6 +152,7 @@ public class FuelDistillerBlockEntity extends BlockEntity implements MenuProvide
 
     private void resetProgress() {
         progress = 0;
+        this.maxProgress = 72;
     }
 
     private void craftItem() {
@@ -181,5 +188,16 @@ public class FuelDistillerBlockEntity extends BlockEntity implements MenuProvide
 
     private void increaseCraftingProgress() {
         progress++;
+    }
+
+    @Override
+    public CompoundTag getUpdateTag(HolderLookup.Provider pRegistries) {
+        return saveWithoutMetadata(pRegistries);
+    }
+
+    @Nullable
+    @Override
+    public Packet<ClientGamePacketListener> getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
     }
 }

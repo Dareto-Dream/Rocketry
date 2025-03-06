@@ -2,6 +2,7 @@ package com.deltavdevs.advancingrocketry.screen;
 
 import com.deltavdevs.advancingrocketry.AdvancingRocketry;
 import com.deltavdevs.advancingrocketry.screen.custom.BiomassProcessorMenu;
+import com.deltavdevs.advancingrocketry.screen.custom.FuelDistillerMenu;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraftforge.common.extensions.IForgeMenuType;
