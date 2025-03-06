@@ -2,6 +2,7 @@ package com.deltavdevs.advancingrocketry;
 
 import com.deltavdevs.advancingrocketry.block.ModBlocks;
 import com.deltavdevs.advancingrocketry.block.entity.ModBlockEntities;
+import com.deltavdevs.advancingrocketry.block.entity.renderer.PedestalBlockEntityRenderer;
 import com.deltavdevs.advancingrocketry.entity.ModEntities;
 import com.deltavdevs.advancingrocketry.entity.client.ChairRenderer;
 import com.deltavdevs.advancingrocketry.entity.client.CyborgRenderer;
@@ -18,6 +19,7 @@ import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -72,6 +74,11 @@ public class AdvancingRocketry {
 
             MenuScreens.register(ModMenuTypes.FUEL_DISTILLER_MENU.get(), FuelDistillerScreen::new);
             //MenuScreens.register(ModMenuTypes.FUEL_TANK_MENU.get(), FuelTankScreen::new);
+        }
+
+        @SubscribeEvent
+        public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
+            event.registerBlockEntityRenderer(ModBlockEntities.PEDESTAL_BE.get(), PedestalBlockEntityRenderer::new);
         }
     }
 }

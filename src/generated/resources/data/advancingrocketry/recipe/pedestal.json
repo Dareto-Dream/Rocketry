@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "advancingrocketry:steel"
+    },
+    "B": {
+      "item": "minecraft:stone"
+    },
+    "C": {
+      "item": "minecraft:item_frame"
+    }
+  },
+  "pattern": [
+    "   ",
+    "BCB",
+    "BAB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "advancingrocketry:pedestal"
+  }
+}

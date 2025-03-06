@@ -1,6 +1,7 @@
-// 1.21	2025-02-28T06:23:18.9519917	Loot Tables
+// 1.21	2025-03-05T20:31:23.3352952	Loot Tables
 839503e52384852b097685b298d84c648012e667 data/advancingrocketry/loot_table/blocks/chair.json
 d9df3aefb9e3345612dd80022b5b33012084400c data/advancingrocketry/loot_table/blocks/fuel_distiller.json
 8f88d7a4d49c37f106223e99508b368f74e5d172 data/advancingrocketry/loot_table/blocks/fuel_tank.json
 1f2c6840652f64dbfbfbc4b62801efa567e5a539 data/advancingrocketry/loot_table/blocks/model_rocket.json
+966fb6b904d4adab461e4cdffba5444d08d7f7a3 data/advancingrocketry/loot_table/blocks/pedestal.json
 e644f5a39c9b53158e36e78346e2708c4ea17098 data/advancingrocketry/loot_table/blocks/steel_block.json
