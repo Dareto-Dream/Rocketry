@@ -64,6 +64,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> PEDESTAL = registerBlock("pedestal",
             () -> new PedestalBlock(BlockBehaviour.Properties.of().noOcclusion()));
 
+    public static final RegistryObject<Block> BIOMASS_PROCESSOR = registerBlock("biomass_processor",
+            () -> new BiomassProcessorBlock(BlockBehaviour.Properties.of()));
+
 
     //Register blocks
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

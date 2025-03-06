@@ -1,6 +1,7 @@
 package com.deltavdevs.advancingrocketry.screen;
 
 import com.deltavdevs.advancingrocketry.AdvancingRocketry;
+import com.deltavdevs.advancingrocketry.screen.custom.BiomassProcessorMenu;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraftforge.common.extensions.IForgeMenuType;
@@ -16,6 +17,9 @@ public class ModMenuTypes {
 
     public static final RegistryObject<MenuType<FuelDistillerMenu>> FUEL_DISTILLER_MENU =
             registerMenuType("fuel_distiller_menu", FuelDistillerMenu::new);
+
+    public static final RegistryObject<MenuType<BiomassProcessorMenu>> BIOMASS_PROCESSOR_MENU =
+            MENUS.register("biomass_processor_menu", () -> IForgeMenuType.create(BiomassProcessorMenu::new));
 
 
     private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(String name, IContainerFactory<T> factory) {

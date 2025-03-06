@@ -2,6 +2,7 @@ package com.deltavdevs.advancingrocketry.block.entity;
 
 import com.deltavdevs.advancingrocketry.AdvancingRocketry;
 import com.deltavdevs.advancingrocketry.block.ModBlocks;
+import com.deltavdevs.advancingrocketry.block.entity.custom.BiomassProcessorBlockEntity;
 import com.deltavdevs.advancingrocketry.block.entity.custom.FuelDistillerBlockEntity;
 import com.deltavdevs.advancingrocketry.block.entity.custom.FuelTankBlockEntity;
 import com.deltavdevs.advancingrocketry.block.entity.custom.PedestalBlockEntity;
@@ -28,6 +29,10 @@ public class ModBlockEntities {
     public static final RegistryObject<BlockEntityType<PedestalBlockEntity>> PEDESTAL_BE =
             BLOCK_ENTITIES.register("pedestal_be", () -> BlockEntityType.Builder.of(
                     PedestalBlockEntity::new, ModBlocks.PEDESTAL.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<BiomassProcessorBlockEntity>> BIOMASS_PROCESSOR_BE =
+            BLOCK_ENTITIES.register("biomass_processor_be", () -> BlockEntityType.Builder.of(
+                    BiomassProcessorBlockEntity::new, ModBlocks.BIOMASS_PROCESSOR.get()).build(null));
 
 
     public static void register(IEventBus eventBus) {

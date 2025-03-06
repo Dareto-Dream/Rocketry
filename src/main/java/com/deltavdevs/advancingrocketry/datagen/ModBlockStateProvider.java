@@ -17,6 +17,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.STEEL_BLOCK);
+        blockWithItem(ModBlocks.BIOMASS_PROCESSOR);
 
         simpleBlockWithItem(ModBlocks.FUEL_DISTILLER.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/fuel_distiller")));

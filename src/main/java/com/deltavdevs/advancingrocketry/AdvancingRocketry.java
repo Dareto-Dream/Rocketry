@@ -13,6 +13,7 @@ import com.deltavdevs.advancingrocketry.item.ModCreativeModeTabs;
 import com.deltavdevs.advancingrocketry.item.ModItems;
 import com.deltavdevs.advancingrocketry.screen.FuelDistillerScreen;
 import com.deltavdevs.advancingrocketry.screen.ModMenuTypes;
+import com.deltavdevs.advancingrocketry.screen.custom.BiomassProcessorScreen;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -73,6 +74,7 @@ public class AdvancingRocketry {
             EntityRenderers.register(ModEntities.CHAIR.get(), ChairRenderer::new);
 
             MenuScreens.register(ModMenuTypes.FUEL_DISTILLER_MENU.get(), FuelDistillerScreen::new);
+            MenuScreens.register(ModMenuTypes.BIOMASS_PROCESSOR_MENU.get(), BiomassProcessorScreen::new);
             //MenuScreens.register(ModMenuTypes.FUEL_TANK_MENU.get(), FuelTankScreen::new);
         }
 
