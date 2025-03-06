@@ -19,11 +19,11 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ROCKET_FUEL.get()))
                     .title(Component.translatable("creativetab.advancingrocketry.rocket_tools"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.ROCKET_FUEL.get());
                         output.accept(ModBlocks.FUEL_DISTILLER.get());
                         output.accept(ModBlocks.FUEL_TANK.get());
 
                         output.accept(ModItems.CHISEL.get());
+                        output.accept(ModBlocks.PEDESTAL.get());
 
 
                     }).build());
@@ -47,6 +47,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.advancingrocketry.rocket_liquid"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.CRUDE_OIL_BUCKET.get());
+                        output.accept(ModItems.ROCKET_FUEL.get());
 
 
                     }).build());

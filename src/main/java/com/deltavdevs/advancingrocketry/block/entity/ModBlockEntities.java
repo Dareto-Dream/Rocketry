@@ -2,6 +2,9 @@ package com.deltavdevs.advancingrocketry.block.entity;
 
 import com.deltavdevs.advancingrocketry.AdvancingRocketry;
 import com.deltavdevs.advancingrocketry.block.ModBlocks;
+import com.deltavdevs.advancingrocketry.block.entity.custom.FuelDistillerBlockEntity;
+import com.deltavdevs.advancingrocketry.block.entity.custom.FuelTankBlockEntity;
+import com.deltavdevs.advancingrocketry.block.entity.custom.PedestalBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -21,6 +24,10 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("fuel_tank_be",
                     () -> BlockEntityType.Builder.of(FuelTankBlockEntity::new,
                             ModBlocks.FUEL_TANK.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<PedestalBlockEntity>> PEDESTAL_BE =
+            BLOCK_ENTITIES.register("pedestal_be", () -> BlockEntityType.Builder.of(
+                    PedestalBlockEntity::new, ModBlocks.PEDESTAL.get()).build(null));
 
 
     public static void register(IEventBus eventBus) {

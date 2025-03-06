@@ -1,10 +1,7 @@
 package com.deltavdevs.advancingrocketry.block;
 
 import com.deltavdevs.advancingrocketry.AdvancingRocketry;
-import com.deltavdevs.advancingrocketry.block.custom.ChairBlock;
-import com.deltavdevs.advancingrocketry.block.custom.FuelDistillerBlock;
-import com.deltavdevs.advancingrocketry.block.custom.FuelTankBlock;
-import com.deltavdevs.advancingrocketry.block.custom.RocketBaseBlock;
+import com.deltavdevs.advancingrocketry.block.custom.*;
 import com.deltavdevs.advancingrocketry.fluid.ModFluids;
 import com.deltavdevs.advancingrocketry.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -45,6 +42,7 @@ public class ModBlocks {
     // Fuel Tank
     public static final RegistryObject<Block> FUEL_TANK = registerBlock("fuel_tank",
             () -> new FuelTankBlock(BlockBehaviour.Properties.of()
+                    .noOcclusion()
                     .strength(3f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.NETHER_BRICKS)));
@@ -62,6 +60,9 @@ public class ModBlocks {
     // the Rocket Base
     public static final RegistryObject<Block> MODEL_ROCKET = registerBlock("model_rocket",
             () -> new RocketBaseBlock(BlockBehaviour.Properties.of().noOcclusion()));
+
+    public static final RegistryObject<Block> PEDESTAL = registerBlock("pedestal",
+            () -> new PedestalBlock(BlockBehaviour.Properties.of().noOcclusion()));
 
 
     //Register blocks

@@ -11,7 +11,6 @@ import com.deltavdevs.advancingrocketry.fluid.ModFluids;
 import com.deltavdevs.advancingrocketry.item.ModCreativeModeTabs;
 import com.deltavdevs.advancingrocketry.item.ModItems;
 import com.deltavdevs.advancingrocketry.screen.FuelDistillerScreen;
-import com.deltavdevs.advancingrocketry.screen.FuelTankScreen;
 import com.deltavdevs.advancingrocketry.screen.ModMenuTypes;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -72,7 +71,7 @@ public class AdvancingRocketry {
             EntityRenderers.register(ModEntities.CHAIR.get(), ChairRenderer::new);
 
             MenuScreens.register(ModMenuTypes.FUEL_DISTILLER_MENU.get(), FuelDistillerScreen::new);
-            MenuScreens.register(ModMenuTypes.FUEL_TANK_MENU.get(), FuelTankScreen::new);
+            //MenuScreens.register(ModMenuTypes.FUEL_TANK_MENU.get(), FuelTankScreen::new);
         }
     }
 }

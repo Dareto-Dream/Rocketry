@@ -1,6 +1,6 @@
 package com.deltavdevs.advancingrocketry.block.custom;
 
-import com.deltavdevs.advancingrocketry.block.entity.FuelDistillerBlockEntity;
+import com.deltavdevs.advancingrocketry.block.entity.custom.FuelDistillerBlockEntity;
 import com.deltavdevs.advancingrocketry.block.entity.ModBlockEntities;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;

@@ -1,7 +1,7 @@
 package com.deltavdevs.advancingrocketry.screen;
 
 import com.deltavdevs.advancingrocketry.block.ModBlocks;
-import com.deltavdevs.advancingrocketry.block.entity.FuelDistillerBlockEntity;
+import com.deltavdevs.advancingrocketry.block.entity.custom.FuelDistillerBlockEntity;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
