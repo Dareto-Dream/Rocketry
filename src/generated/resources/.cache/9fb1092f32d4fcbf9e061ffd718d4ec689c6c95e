@@ -1,6 +1,7 @@
-// 1.21	2025-03-05T20:31:23.3394704	Recipes
+// 1.21	2025-03-06T12:54:25.8384087	Recipes
 7ff583ca4347f22d81af819cc7421aa84088ca20 data/advancingrocketry/advancement/recipes/misc/chair.json
 80b7e1949ac9b1700baa28124312f99141eabce8 data/advancingrocketry/advancement/recipes/misc/chisel.json
+057eae29197578867618c12f828fd991d1cabcbd data/advancingrocketry/advancement/recipes/misc/fuel_distiller.json
 f18b6fa00f1d342a02c57f578b2dc731603adebb data/advancingrocketry/advancement/recipes/misc/fuel_tank.json
 105170c9da996ee7f5d4655af6aea2c4cd95a5e9 data/advancingrocketry/advancement/recipes/misc/model_rocket.json
 a2ad91565bea0ca68eec64f6206dcc9912471fed data/advancingrocketry/advancement/recipes/misc/pedestal.json
@@ -10,6 +11,7 @@ a2ad91565bea0ca68eec64f6206dcc9912471fed data/advancingrocketry/advancement/reci
 78b45c079cd4defed9b4ff2a3083712a87a4a3a4 data/advancingrocketry/advancement/recipes/misc/steel_from_smelting_iron_ingot.json
 0abbf3b82d74eab34f7262992a6783cc9c46392e data/advancingrocketry/recipe/chair.json
 bdaef4375cc12688be4a4abeb788bb51a731a24f data/advancingrocketry/recipe/chisel.json
+3c593dfa66e4f3df85940008347fad770be5c298 data/advancingrocketry/recipe/fuel_distiller.json
 8ac11c5be6b1a252d7be2dfa689cc812c96bb4b9 data/advancingrocketry/recipe/fuel_tank.json
 8cc8be9563f66104e010edd0a01bc2993e8e267c data/advancingrocketry/recipe/model_rocket.json
 42ea9659b2bd050d95e91294afdaf63b9b7a8896 data/advancingrocketry/recipe/pedestal.json

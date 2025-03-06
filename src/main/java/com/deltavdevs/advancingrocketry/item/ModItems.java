@@ -3,10 +3,12 @@ package com.deltavdevs.advancingrocketry.item;
 import com.deltavdevs.advancingrocketry.AdvancingRocketry;
 import com.deltavdevs.advancingrocketry.entity.ModEntities;
 import com.deltavdevs.advancingrocketry.fluid.ModFluids;
+import com.deltavdevs.advancingrocketry.item.custom.BiomassItem;
 import com.deltavdevs.advancingrocketry.item.custom.ChiselItem;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.Rarity;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -21,7 +23,7 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> ROCKET_FUEL = ITEMS.register("rocket_fuel",
-            () -> new Item(new Item.Properties().durability(1)));
+            () -> new Item(new Item.Properties().durability(1).rarity(Rarity.RARE)));
 
     public static final RegistryObject<Item> CHISEL = ITEMS.register("chisel",
             () -> new ChiselItem(new Item.Properties().durability(32)));
@@ -34,6 +36,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> CYBORG_SPAWN_EGG = ITEMS.register("cyborg_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.CYBORG, 0x53524b, 0x53c741, new Item.Properties()));
+
+    public static final RegistryObject<Item> BIOMASS = ITEMS.register("biomass",
+            () -> new BiomassItem(new Item.Properties().stacksTo(16)));
 
 
 

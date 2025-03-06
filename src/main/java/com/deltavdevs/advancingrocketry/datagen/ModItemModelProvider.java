@@ -15,6 +15,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         basicItem(ModItems.STEEL.get());
         basicItem(ModItems.CHISEL.get());
+        basicItem(ModItems.BIOMASS.get());
 
         basicItem(ModItems.ROCKET_FUEL.get());
         basicItem(ModItems.CRUDE_OIL_BUCKET.get());

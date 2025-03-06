@@ -19,6 +19,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -144,7 +145,7 @@ public class BiomassProcessorBlockEntity extends BlockEntity implements MenuProv
     }
 
     private void craftItem() {
-        ItemStack output = new ItemStack(ModItems.ROCKET_FUEL.get());
+        ItemStack output = new ItemStack(ModItems.BIOMASS.get());
 
         itemHandler.extractItem(INPUT_SLOT, 1, false);
         itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(output.getItem(),
@@ -160,8 +161,8 @@ public class BiomassProcessorBlockEntity extends BlockEntity implements MenuProv
     }
 
     private boolean hasRecipe() {
-        Item input = ModItems.STEEL.get();
-        ItemStack output = new ItemStack(ModItems.ROCKET_FUEL.get());
+        Item input = Items.WHEAT_SEEDS;
+        ItemStack output = new ItemStack(ModItems.BIOMASS.get());
 
         return itemHandler.getStackInSlot(INPUT_SLOT).is(input) && canInsertItemIntoOutputSlot(output)
                 && canInsertAmountIntoOutputSlot(output.getCount());
