@@ -77,6 +77,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('C', Items.ITEM_FRAME)
                 .unlockedBy(getHasName(Items.ITEM_FRAME), has(Items.ITEM_FRAME)).save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.FUEL_DISTILLER.get())
+                .pattern("BBB")
+                .pattern("BCB")
+                .pattern("BAB")
+                .define('A', Items.FURNACE)
+                .define('B', ModItems.STEEL.get())
+                .define('C', ModBlocks.FUEL_TANK.get())
+                .unlockedBy(getHasName(Items.ITEM_FRAME), has(Items.ITEM_FRAME)).save(pRecipeOutput);
+
         oreSmelting(pRecipeOutput, STEEL_SMELTABLES, RecipeCategory.MISC, ModItems.STEEL.get(), 0.25f, 200, "steel");
         oreBlasting(pRecipeOutput, STEEL_SMELTABLES, RecipeCategory.MISC, ModItems.STEEL.get(), 0.25f, 100, "steel");
 
