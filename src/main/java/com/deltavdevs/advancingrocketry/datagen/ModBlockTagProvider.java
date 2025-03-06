@@ -27,7 +27,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.FUEL_TANK.get());
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
-                //.add(ModBlocks.RAW_ALEXANDRITE_BLOCK.get())
+                .add(ModBlocks.FUEL_DISTILLER.get());
         ;
     }
 }

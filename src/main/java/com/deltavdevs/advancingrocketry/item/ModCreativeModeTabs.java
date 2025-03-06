@@ -36,6 +36,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.STEEL.get());
                         output.accept(ModBlocks.STEEL_BLOCK.get());
                         output.accept(ModBlocks.CHAIR.get());
+                        output.accept(ModItems.BIOMASS.get());
 
 
 
