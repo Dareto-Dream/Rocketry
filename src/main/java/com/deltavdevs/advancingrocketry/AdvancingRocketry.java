@@ -11,6 +11,7 @@ import com.deltavdevs.advancingrocketry.fluid.ModFluidTypes;
 import com.deltavdevs.advancingrocketry.fluid.ModFluids;
 import com.deltavdevs.advancingrocketry.item.ModCreativeModeTabs;
 import com.deltavdevs.advancingrocketry.item.ModItems;
+import com.deltavdevs.advancingrocketry.recipe.ModRecipes;
 import com.deltavdevs.advancingrocketry.screen.custom.FuelDistillerScreen;
 import com.deltavdevs.advancingrocketry.screen.ModMenuTypes;
 import com.deltavdevs.advancingrocketry.screen.custom.BiomassProcessorScreen;
@@ -49,6 +50,7 @@ public class AdvancingRocketry {
         ModFluidTypes.register(modEventBus);
 
         ModEntities.register(modEventBus);
+        ModRecipes.register(modEventBus);
 
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);

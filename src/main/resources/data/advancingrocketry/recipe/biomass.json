@@ -1,0 +1,10 @@
+{
+  "type": "advancingrocketry:biomass_processor",
+  "ingredient": {
+    "item": "minecraft:wheat_seeds"
+  },
+  "result": {
+    "id": "advancingrocketry:biomass",
+    "count": 12
+  }
+}

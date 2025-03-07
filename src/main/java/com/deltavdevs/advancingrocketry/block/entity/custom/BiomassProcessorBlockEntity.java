@@ -2,6 +2,9 @@ package com.deltavdevs.advancingrocketry.block.entity.custom;
 
 import com.deltavdevs.advancingrocketry.block.entity.ModBlockEntities;
 import com.deltavdevs.advancingrocketry.item.ModItems;
+import com.deltavdevs.advancingrocketry.recipe.BiomassProcessorRecipe;
+import com.deltavdevs.advancingrocketry.recipe.BiomassProcessorRecipeInput;
+import com.deltavdevs.advancingrocketry.recipe.ModRecipes;
 import com.deltavdevs.advancingrocketry.screen.custom.BiomassProcessorMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
@@ -20,6 +23,7 @@ import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -27,6 +31,8 @@ import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Optional;
 
 public class BiomassProcessorBlockEntity extends BlockEntity implements MenuProvider {
     public final ItemStackHandler itemHandler = new ItemStackHandler(2) {
@@ -145,7 +151,8 @@ public class BiomassProcessorBlockEntity extends BlockEntity implements MenuProv
     }
 
     private void craftItem() {
-        ItemStack output = new ItemStack(ModItems.BIOMASS.get());
+        Optional<RecipeHolder<BiomassProcessorRecipe>> recipe = getCurrentRecipe();
+        ItemStack output = recipe.get().value().output();
 
         itemHandler.extractItem(INPUT_SLOT, 1, false);
         itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(output.getItem(),
@@ -161,11 +168,18 @@ public class BiomassProcessorBlockEntity extends BlockEntity implements MenuProv
     }
 
     private boolean hasRecipe() {
-        Item input = Items.WHEAT_SEEDS;
-        ItemStack output = new ItemStack(ModItems.BIOMASS.get());
+        Optional<RecipeHolder<BiomassProcessorRecipe>> recipe = getCurrentRecipe();
+        if(recipe.isEmpty()) {
+            return false;
+        }
 
-        return itemHandler.getStackInSlot(INPUT_SLOT).is(input) && canInsertItemIntoOutputSlot(output)
-                && canInsertAmountIntoOutputSlot(output.getCount());
+        ItemStack output = recipe.get().value().output();
+        return canInsertItemIntoOutputSlot(output) && canInsertAmountIntoOutputSlot(output.getCount());
+    }
+
+    private Optional<RecipeHolder<BiomassProcessorRecipe>> getCurrentRecipe() {
+        return this.level.getRecipeManager()
+                .getRecipeFor(ModRecipes.BIOMASS_PROCESSOR_TYPE.get(), new BiomassProcessorRecipeInput(itemHandler.getStackInSlot(INPUT_SLOT)), level);
     }
 
     private boolean canInsertItemIntoOutputSlot(ItemStack output) {
