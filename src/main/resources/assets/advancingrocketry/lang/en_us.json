@@ -34,5 +34,11 @@
   "painting.advancingrocketry.howling.author": "The Gunman",
 
   "entity.advancingrocketry.spacedrone": "Space Drone",
-  "entity.advancingrocketry.cyborg": "Cyborg"
+  "entity.advancingrocketry.cyborg": "Cyborg",
+
+  "advancements.supplies.smelt_steel.title": "Pretty Sturdy",
+  "advancements.supplies.steel_block.title": "Sturdier",
+
+  "advancements.supplies.smelt_steel.description": "Smelt some iron to get steel!",
+  "advancements.supplies.steel_block.description": "Craft a Steel Block"
 }

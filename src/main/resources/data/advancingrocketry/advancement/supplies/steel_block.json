@@ -1,0 +1,33 @@
+{
+  "parent": "advancingrocketry:supplies/smelt_steel",
+  "criteria": {
+    "steel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "advancingrocketry:steel_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.supplies.steel_block.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "advancingrocketry:steel_block"
+    },
+    "title": {
+      "translate": "advancements.supplies.steel_block.title"
+    }
+  },
+  "requirements": [
+    [
+      "steel_block"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

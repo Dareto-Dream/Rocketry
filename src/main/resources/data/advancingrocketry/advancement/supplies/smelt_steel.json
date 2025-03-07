@@ -1,0 +1,32 @@
+{
+  "criteria": {
+    "steel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "advancingrocketry:steel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.supplies.smelt_steel.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "advancingrocketry:steel"
+    },
+    "title": {
+      "translate": "advancements.supplies.smelt_steel.title"
+    }
+  },
+  "requirements": [
+    [
+      "steel"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
